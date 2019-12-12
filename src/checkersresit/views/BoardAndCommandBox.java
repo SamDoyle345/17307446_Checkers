@@ -23,13 +23,11 @@ public class BoardAndCommandBox extends HBox {
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
         double screenWidth = bounds.getWidth();
         double screenHeight = bounds.getHeight();
-        double checkerRadius = screenWidth/20;
         GameController gameController = new GameController(screenWidth/20, player1Name, player2Name, this);
 
         HBox root = new HBox();
         VBox board = new VBox();
-        root.getChildren().addAll(board, new HistoryView(screenWidth * 0.19, screenHeight * 0.9, gameController));
-        root.setSpacing(-350);
+        root.getChildren().addAll(board);
 
         StackPane colLabelsTop = new StackPane();
         Rectangle labelBackgroundTop = new Rectangle();
@@ -104,7 +102,8 @@ public class BoardAndCommandBox extends HBox {
         stack.getChildren().addAll(spacer, names);
         board.getChildren().addAll(stack, commandLine, submitCommand);
 
-
+        root.getChildren().add(new HistoryView(screenWidth * 0.19, screenHeight * 0.9, gameController));
+        root.setSpacing(-screenWidth/6);
 
         primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.setFullScreen(true);
