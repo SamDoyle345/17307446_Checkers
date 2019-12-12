@@ -29,4 +29,4 @@ Run -> Edit Configurations -> VM Options:
 ```
 
 #### To Run From Jar
-java --module-path/to/JAVAFX --add-modules=javafx.fxml,javafx.controls -jar nameofjar.jar
+java --module-path \to\JAVAFX --add-modules=javafx.fxml,javafx.controls -jar nameofjar.jar
