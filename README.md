@@ -27,3 +27,6 @@ Run -> Edit Configurations -> VM Options:
 --module-path /path/to/javafx/javafx-sdk-11.0.2/lib 
 --add-modules=javafx.fxml,javafx.controls,javafx.fxml
 ```
+
+#### To Run From Jar
+java --module-path/to/JAVAFX --add-modules=javafx.fxml,javafx.controls -jar nameofjar.jar
